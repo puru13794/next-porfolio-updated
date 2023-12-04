@@ -23,7 +23,7 @@ const contact = (props) => {
       <div className={styles.socialWrapper}>
         {data.imagelinks.map((media) => {
           return (
-            <Link href={media.href}>
+            <Link href={media.href} target="_blank">
               <Image
                 src={media.image}
                 alt={media.name}
