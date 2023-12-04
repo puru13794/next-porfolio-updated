@@ -1,0 +1,18 @@
+.contactWrapper{
+    background-color: cadetblue;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    .address {
+        display: flex;
+        flex-direction: column;
+        padding: 5px;
+        font-size: 20px;
+    }
+    .socialWrapper{
+        display: flex;
+        flex-direction: row;
+        gap: 25px;
+    }
+}

@@ -1,0 +1,21 @@
+.navWrapper {
+  z-index: 999;
+  padding: 20px;
+  padding-right: 60px;
+  li {
+    list-style-type: none;
+  }
+  .mainNav {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 50px;
+    li{
+      font-size: 20px; 
+    }
+    :hover{
+      transition: color 0.3s ease;
+      color: rgb(150, 146, 146);
+    }
+  }
+}

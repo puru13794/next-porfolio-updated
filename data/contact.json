@@ -1,0 +1,24 @@
+{
+  "imagelinks": [
+    {
+      "image": "/github-mark.svg",
+      "name": "Github",
+      "href": ""
+    },
+    {
+      "image": "/logo-black.png",
+      "name": "Twitter",
+      "href": ""
+    },
+    {
+      "image": "/linkedin.png",
+      "name": "LinkedIn",
+      "href": ""
+    }
+  ],
+  "address": {
+    "phone": "+918008621161",
+    "email": "puru13794@gmail.com",
+    "location": "Kolimigundla(v), Nandyal(Dist), AP-518123"
+  }
+}

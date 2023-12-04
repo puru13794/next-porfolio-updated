@@ -1,0 +1,22 @@
+.mainWrapper {
+  height: 100vh;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .main {
+    font-size: 50px;
+  }
+}
+
+
+@media(max-width: 480px){
+  .mainWrapper {
+    align-items: start;
+    margin-top: 300px;
+    .main {
+      font-size: 27px;
+    }
+  }
+  
+}
