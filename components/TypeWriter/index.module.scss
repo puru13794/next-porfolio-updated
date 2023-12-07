@@ -7,10 +7,56 @@
   .main {
     font-size: 50px;
   }
+  /* Add these styles to your CSS file */
+  .scrollButton {
+    position: absolute;
+    bottom: 20px;
+    // left: 50%;
+    // transform: translateX(-50%);
+    padding: 10px;
+    background-color: none;
+    color: #000;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    animation: vibrate 2s infinite linear, scroll 1s infinite;
+  }
+  .downarrow:before {
+    content: "\276F";
+  }
+
+  .downarrow {
+    font-size: 30px;
+    display: inline-block;
+    -ms-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+    // padding: 10px;
+  }
 }
 
+@keyframes vibrate {
+  0%,
+  100% {
+    transform: translateX(-50%);
+  }
+  50% {
+    transform: translateX(-48%);
+  }
+}
 
-@media(max-width: 480px){
+@keyframes scroll {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(5px);
+  }
+}
+
+@media (max-width: 480px) {
   .mainWrapper {
     align-items: start;
     margin-top: 300px;
@@ -18,5 +64,4 @@
       font-size: 27px;
     }
   }
-  
 }

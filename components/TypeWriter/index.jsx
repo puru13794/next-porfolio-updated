@@ -1,11 +1,16 @@
+import { useRef } from "react";
 import Typewriter from "typewriter-effect";
 import styles from "./index.module.scss";
 
 const TypeWriterEffect = (props) => {
+  const nextSectionRef = useRef();
+  const handleClick = () => {
+    nextSectionRef.current.scrollIntoView({ behavior: "smooth" });
+  };
   return (
     <div id="about" className={styles.mainWrapper}>
       <p className={styles.main}>
-        Hi👋  &nbsp; i'm Purushottam Reddy
+        Hi👋 &nbsp; i'm Purushottam Reddy
         <br />
         <Typewriter
           onInit={(typewriter) => {
@@ -18,6 +23,11 @@ const TypeWriterEffect = (props) => {
           }}
         />
       </p>
+      <button className={styles.scrollButton} onClick={handleClick}>
+        Scroll Down
+        <br />
+        <span className={styles.downarrow}></span>
+      </button>
     </div>
   );
 };
