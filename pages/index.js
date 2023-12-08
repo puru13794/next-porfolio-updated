@@ -5,6 +5,7 @@ import Timeline from "../components/Timeline/index";
 import NavBar from "../components/NavBar";
 import Contact from "../components/contact";
 
+
 export default function Home() {
   const [slideshow, setSlideShow] = useState(false);
   const timelineRef = useRef();
