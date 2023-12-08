@@ -4,7 +4,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: aliceblue;
+  background: linear-gradient(#101820, #d1d1d1);
   .main {
     font-size: 50px;
   }
@@ -15,7 +15,7 @@
     // left: 50%;
     // transform: translateX(-50%);
     padding: 10px;
-    background-color: aliceblue;
+    background-color: transparent;
     color: #000;
     cursor: pointer;
     border: none;
@@ -59,8 +59,7 @@
 
 @media (max-width: 480px) {
   .mainWrapper {
-    align-items: start;
-    margin-top: 300px;
+    // align-items: start;
     .main {
       font-size: 27px;
     }

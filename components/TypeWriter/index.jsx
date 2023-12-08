@@ -11,12 +11,14 @@ const TypeWriterEffect = (props) => {
   return (
     <div id="about" className={styles.mainWrapper}>
       <p className={styles.main}>
-        Hi👋 &nbsp; i'm Purushottam Reddy
+        Hi there! 👋 I'm Purushottam Reddy,
+        {/* Hi👋 &nbsp; i'm Purushottam Reddy */}
         <br />
         <Typewriter
           onInit={(typewriter) => {
             typewriter
-              .typeString("    - BackEnd")
+              .typeString("- BackEnd")
+              .pauseFor(200)
               .deleteChars(7)
               .pauseFor(100)
               .typeString("FullStack Developer")
@@ -25,7 +27,7 @@ const TypeWriterEffect = (props) => {
         />
       </p>
       <button className={styles.scrollButton} onClick={handleClick}>
-        Scroll Down
+        <b>Explore</b>
         <br />
         <span className={styles.downarrow}></span>
       </button>
