@@ -1,7 +1,7 @@
 import { Chrono } from "react-chrono";
 import styles from "./index.module.scss";
 
-const Timeline = () => {
+const Timeline = (props) => {
   const items = [
     {
       title: "May 1940",
@@ -41,13 +41,16 @@ const Timeline = () => {
     },
   ];
   return (
-    <div class={styles.timelineWrapper}>
+    <div
+      id="timeline-section"
+      class={styles.timelineWrapper}
+      ref={props.timelineRef}
+    >
       <Chrono
         items={items}
         mode="HORIZONTAL"
-        slideShow
+        slideShow={true}
         slideItemDuration={2000}
-        slideShowType="slide_in"
       />
     </div>
   );

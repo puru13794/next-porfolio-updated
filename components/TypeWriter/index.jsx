@@ -3,8 +3,9 @@ import Typewriter from "typewriter-effect";
 import styles from "./index.module.scss";
 
 const TypeWriterEffect = (props) => {
-  const nextSectionRef = useRef();
+  const nextSectionRef = props.timelineRef;
   const handleClick = () => {
+    props.setSlideShow(true);
     nextSectionRef.current.scrollIntoView({ behavior: "smooth" });
   };
   return (
