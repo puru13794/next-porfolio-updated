@@ -58,7 +58,7 @@ const Timeline = (props) => {
           mode="HORIZONTAL"
           slideShow={true}
           // slideItemDuration={2000}
-          cardHeight={200} // sets the height of the timeline card to 200px
+          cardHeight={300} // sets the height of the timeline card to 200px
           mediaHeight={100}
           contentDetailsHeight={80}
           readMore={true}
