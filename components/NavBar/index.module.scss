@@ -13,15 +13,23 @@
     gap: 25px;
     a {
       color: white;
-      font-size: 20px;
+      font-size: 15px;
       padding: 5px 10px;
-      border: 2px solid #515F71;
+      border: 2px solid #515f71;
       border-radius: 40px;
     }
     a:hover {
       color: #101820;
       transition: background-color 0.4s ease;
-      background-color: #7C92AE;
+      background-color: #7c92ae;
     }
   }
+}
+
+.stickyNavWrapper {
+  top: 0;
+  z-index: 100;
+  position: fixed;
+  width: 100%;
+  background: transparent;
 }

@@ -5,8 +5,8 @@ import styles from "./index.module.scss";
 const TypeWriterEffect = (props) => {
   const nextSectionRef = props.timelineRef;
   const handleClick = () => {
-    props.setSlideShow(true);
-    nextSectionRef.current.scrollIntoView({ behavior: "smooth" });
+    // props.setSlideShow(true);
+    // nextSectionRef.current.scrollIntoView({ behavior: "smooth" });
   };
   return (
     <div id="about" className={styles.mainWrapper}>
@@ -26,11 +26,13 @@ const TypeWriterEffect = (props) => {
           }}
         />
       </p>
-      <button className={styles.scrollButton} onClick={handleClick}>
-        <b>Explore</b>
-        <br />
-        <span className={styles.downarrow}></span>
-      </button>
+      {!props.stickyNav && (
+        <button className={styles.scrollButton} onClick={handleClick}>
+          <b>Explore</b>
+          <br />
+          <span className={styles.downarrow}></span>
+        </button>
+      )}
     </div>
   );
 };
