@@ -4,10 +4,20 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(#101820, #d1d1d1);
-  .main {
+  flex-direction: column;
+  // background: linear-gradient(#101820, #d1d1d1);
+
+  .mainHead {
     font-size: 40px;
+    font-weight: 600;
+    font-family: "monospace";
   }
+  .typewriteClass {
+    // max-width: 400px;
+    white-space: pre-line;
+    font-family: monospace;
+  }
+
   /* Add these styles to your CSS file */
   .scrollButton {
     position: absolute;
@@ -16,7 +26,7 @@
     // transform: translateX(-50%);
     padding: 10px;
     background-color: transparent;
-    color: #000;
+    color: #0f0050;
     cursor: pointer;
     border: none;
     border-radius: 5px;

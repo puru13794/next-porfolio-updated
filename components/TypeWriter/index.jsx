@@ -5,27 +5,24 @@ import styles from "./index.module.scss";
 const TypeWriterEffect = (props) => {
   const nextSectionRef = props.timelineRef;
   const handleClick = () => {
-    // props.setSlideShow(true);
-    // nextSectionRef.current.scrollIntoView({ behavior: "smooth" });
+    props.setSlideShow(true);
+    nextSectionRef.current.scrollIntoView({ behavior: "smooth" });
   };
   return (
-    <div id="about" className={styles.mainWrapper}>
-      <p className={styles.main}>
-        Hi there! 👋 I'm Purushottam Reddy,
-        {/* Hi👋 &nbsp; i'm Purushottam Reddy */}
-        <br />
-        <Typewriter
-          onInit={(typewriter) => {
-            typewriter
-              .typeString("- BackEnd")
-              .pauseFor(200)
-              .deleteChars(7)
-              .pauseFor(100)
-              .typeString("FullStack Developer")
-              .start();
-          }}
-        />
-      </p>
+    <div id="home" className={styles.mainWrapper}>
+      <p className={styles.mainHead}>HI THERE! I'M PURUSHOTTAM REDDY</p>
+      <br/>
+      <Typewriter
+        options={{ delay: 10, wrapperClassName: `${styles.typewriteClass}` }}
+        onInit={(typewriter) => {
+          typewriter
+            .typeString(
+              "Passionate FullStack Developer dedicated to crafting exceptional online experiences and \n helping businesses realize their MVP goals. Skilled in both front-end and back-end \n development, I aim to create functional, visually appealing websites that align with each \n client's unique vision.  Let's collaborate to turn your ideas into digital success!"
+            )
+            // .pauseFor(200)
+            .start();
+        }}
+      />
       {!props.stickyNav && (
         <button className={styles.scrollButton} onClick={handleClick}>
           <b>Explore</b>

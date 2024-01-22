@@ -3,6 +3,7 @@ import styles from "./index.module.scss";
 import useDeviceDetect from "../../components/DeviceDetection";
 import Link from "next/link";
 import { slide as Menu } from "react-burger-menu";
+import Image from "next/image";
 
 const NavBar = (props) => {
   // const { isMobile } = useDeviceDetect();
@@ -18,12 +19,24 @@ const NavBar = (props) => {
 
   return (
     <>
-      <div
+      <div id="home"
         className={`${styles.navWrapper} ${
           props.stickyNav ? styles.stickyNavWrapper : ""
         }`}
       >
+        <div className={styles.imageSection}>
+          <Image
+            src="/profile.png"
+            alt="profile_img"
+            width={40}
+            height={40}
+            // fill={true}
+            className={styles.mainImage}
+          />
+          <p className={styles.name}>Purushottam Reddy</p>
+        </div>
         <ul className={styles.mainNav}>
+          <a href="https://puru-porfolio.vercel.app/">Home</a>
           <a href="#about">About</a>
           <a href="#contact">Contact</a>
           <Link href={`Resume-1.pdf`} target="_blank">

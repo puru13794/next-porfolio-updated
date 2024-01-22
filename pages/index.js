@@ -3,12 +3,15 @@ import TypeWriterEffect from "../components/TypeWriter";
 import Timeline from "../components/Timeline/index";
 import NavBar from "../components/NavBar";
 import Contact from "../components/contact";
+import About from "../components/About";
+import Projects from "../components/Projects";
+import Footer from "../components/Footer";
 import "../styles/Home.module.css";
 
 export default function Home() {
   const [slideshow, setSlideShow] = useState(false);
   const [stickyNav, setStickyNav] = useState(false);
-  const timelineRef = useRef();
+  const aboutRef = useRef();
   return (
     <div id="nav-wrapper">
       <NavBar
@@ -18,11 +21,13 @@ export default function Home() {
       />
       <TypeWriterEffect
         setSlideShow={setSlideShow}
-        timelineRef={timelineRef}
+        timelineRef={aboutRef}
         stickyNav={stickyNav}
       />
-      {/* <Timeline slideshow={slideshow} timelineRef={timelineRef} /> */}
+      <About aboutRef={aboutRef}/>
+      <Projects />
       <Contact />
+      <Footer />
     </div>
   );
 }
