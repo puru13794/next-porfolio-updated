@@ -1,20 +1,33 @@
 import { useState, useRef } from "react";
-import styles from "@/styles/Home.module.css";
 import TypeWriterEffect from "../components/TypeWriter";
 import Timeline from "../components/Timeline/index";
 import NavBar from "../components/NavBar";
 import Contact from "../components/contact";
-
+import About from "../components/About";
+import Projects from "../components/Projects";
+import Footer from "../components/Footer";
+import "../styles/Home.module.css";
 
 export default function Home() {
   const [slideshow, setSlideShow] = useState(false);
-  const timelineRef = useRef();
+  const [stickyNav, setStickyNav] = useState(false);
+  const aboutRef = useRef();
   return (
-    <>
-      <NavBar />
-      <TypeWriterEffect setSlideShow={setSlideShow} timelineRef={timelineRef} />
-      <Timeline slideshow={slideshow} timelineRef={timelineRef} />
+    <div id="nav-wrapper">
+      <NavBar
+        stickyNav={stickyNav}
+        setStickyNav={setStickyNav}
+        outerContainerId={"nav-wrapper"}
+      />
+      <TypeWriterEffect
+        setSlideShow={setSlideShow}
+        timelineRef={aboutRef}
+        stickyNav={stickyNav}
+      />
+      <About aboutRef={aboutRef}/>
+      <Projects />
       <Contact />
-    </>
+      <Footer />
+    </div>
   );
 }
