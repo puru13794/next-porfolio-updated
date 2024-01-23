@@ -11,6 +11,7 @@ import "../styles/Home.module.css";
 export default function Home() {
   const [slideshow, setSlideShow] = useState(false);
   const [stickyNav, setStickyNav] = useState(false);
+  const [isOpen, setOpen] = useState(false);
   const aboutRef = useRef();
   return (
     <div id="nav-wrapper">
@@ -18,13 +19,17 @@ export default function Home() {
         stickyNav={stickyNav}
         setStickyNav={setStickyNav}
         outerContainerId={"nav-wrapper"}
+        isOpen={isOpen}
+        setOpen={setOpen}
       />
       <TypeWriterEffect
         setSlideShow={setSlideShow}
         timelineRef={aboutRef}
         stickyNav={stickyNav}
+        isOpen={isOpen}
+        setOpen={setOpen}
       />
-      <About aboutRef={aboutRef}/>
+      <About aboutRef={aboutRef} />
       <Projects />
       <Contact />
       <Footer />
