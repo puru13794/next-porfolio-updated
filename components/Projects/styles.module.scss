@@ -22,7 +22,7 @@
   }
   .description {
     // margin: auto;
-    padding: 20px 0;
+    padding: 20px 20px;
     display: flex;
     justify-content: center;
   }
@@ -54,6 +54,24 @@
         cursor: not-allowed;
         background: #666;
         color: #797979;
+      }
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .mainWrapper {
+    .heading {
+      &:after {
+        top: calc(100% + 67rem);
+      }
+    }
+    .projectWrapper {
+      padding: 40px 20px;
+      flex-direction: column;
+      img {
+        width: 400px;
+        height: 250px;
       }
     }
   }

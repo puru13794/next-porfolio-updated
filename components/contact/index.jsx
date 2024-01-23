@@ -91,6 +91,7 @@ const contact = (props) => {
                 setMailData({ ...mailData, name: e.target.value })
               }
             />
+            {error.name && <p className={styles.error}>This value is reqired</p>}
           </div>
           <div className={styles.inputWrapper}>
             <label for="email">Email</label>
@@ -103,6 +104,7 @@ const contact = (props) => {
                 setMailData({ ...mailData, email: e.target.value })
               }
             />
+            {error.email && <p className={styles.error}>Provide a valid Email</p>}
           </div>
           <div className={styles.inputWrapper}>
             <label for="message">Message</label>
@@ -116,6 +118,7 @@ const contact = (props) => {
                 setMailData({ ...mailData, message: e.target.value })
               }
             />
+            {error.message && <p className={styles.error}>This is required</p>}
           </div>
           <button type="submit" className={styles.submit}>
             Submit

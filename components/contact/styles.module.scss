@@ -26,7 +26,7 @@
   .desc {
     max-width: 900px;
     margin: auto;
-    padding: 25px 0;
+    padding: 25px 25px;
   }
   .formWrapper {
     width: 800px;
@@ -68,6 +68,9 @@
           border: 1px solid #ebebeb;
           padding: 15px;
         }
+        .error {
+          color: red;
+        }
       }
       .submit {
         background-color: #0f0050;
@@ -86,6 +89,24 @@
         // font-size: 1.6rem;
         &:hover {
           transform: translateY(-3px);
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .contactWrapper {
+    .formWrapper {
+      padding: 25px;
+      form {
+        .inputWrapper {
+          input {
+            width: 350px;
+          }
+          .messageInput {
+            width: 350px;
+          }
         }
       }
     }

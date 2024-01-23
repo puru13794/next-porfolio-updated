@@ -23,7 +23,7 @@
   .desc {
     max-width: 900px;
     margin: auto;
-    padding: 25px 0;
+    padding: 25px 20px;
   }
   .maindesc {
     display: flex;
@@ -85,6 +85,24 @@
           font-weight: 600;
           color: #666;
         }
+      }
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .mainWrapper {
+    .heading {
+      &:after {
+        top: calc(100% + 13.5rem);
+      }
+    }
+    .maindesc {
+      flex-direction: column;
+      gap: 20px;
+      padding: 10px;
+      .moreAboutMe {
+        margin-left: 0;
       }
     }
   }

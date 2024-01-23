@@ -40,3 +40,21 @@
     }
   }
 }
+
+@media (max-width: 991px) {
+  .footerWrapper {
+    .subWrapper {
+      padding: 40px 0;
+      margin: 0 20px;
+      .sec {
+        width: 200px;
+      }
+      .socials {
+        padding-right: 0;
+      }
+    }
+    .desclaimer {
+      padding: 40px 20px;
+    }
+  }
+}

@@ -76,3 +76,15 @@
     }
   }
 }
+
+@media (max-width: 991px) {
+  .mainWrapper {
+    justify-content: flex-start;
+    margin-top: 150px;
+    gap: 20px;
+    .mainHead{
+      font-size: 30px;
+      text-align: center;
+    }
+  }
+}
