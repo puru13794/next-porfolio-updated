@@ -11,12 +11,13 @@
     &:after {
       content: "";
       position: absolute;
-      top: calc(100% + 43rem);
+      // top: calc(100% + 43rem);
       height: 5px;
       width: 4rem;
       background: #0f0050;
       left: 50%;
-      transform: translateX(-50%);
+      // transform: translateX(-50%);
+      transform: translate3d(-50%, 40px, 0);
       border-radius: 5px;
     }
   }
@@ -63,7 +64,8 @@
   .mainWrapper {
     .heading {
       &:after {
-        top: calc(100% + 67rem);
+        // top: calc(100% + 67rem);
+        transform: translate3d(-50%, 40px, 0);
       }
     }
     .projectWrapper {
