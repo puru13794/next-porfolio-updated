@@ -41,6 +41,27 @@ const projects = () => {
           </div>
         </div>
       </div>
+      <div className={styles.projectWrapper}>
+        <Image src="/todo.png" width={620} height={350} />
+        <div className={styles.descriptionSection}>
+          <h2 className={styles.projectTitle}>TODO APP</h2>
+          <p className={styles.projectDescription}>Basic Task Manager app build with (ROR and nextjs)</p>
+          <div className={styles.buttonWrapper}>
+            <a
+              href="https://task-manager-frontend-next.vercel.app/login"
+              target="_blank"
+            >
+              Live Demo
+            </a>
+            <a
+              href="https://github.com/puru13794/task-manager-backend"
+              target="_blank"
+            >
+              Source Code
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
